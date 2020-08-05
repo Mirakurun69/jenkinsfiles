@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh 'ssh root@slave1 \'whoami\''
 		echo "=========== start building image ============"
-		dir ('docker/toolbox/') {
+		dir ('jenkinsfiles/docker/toolbox/') {
 			sh 'docker build . '
 		}
             }
