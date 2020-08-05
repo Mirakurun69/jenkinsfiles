@@ -14,10 +14,6 @@ pipeline {
         stage("First step") {
             steps {
                 sh 'ssh root@slave1 \'hostname\''
-            }
-	}
-        stage("Create docker image") {
-            steps {
 		echo "=========== start building image ============"
 		dir ('docker/toolbox/') {
 			sh 'docker build . '
