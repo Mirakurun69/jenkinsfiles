@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh root@slave1 \'hostname\''
+                sh 'ssh root@slave1 \'whoami\''
 		echo "=========== start building image ============"
 		dir ('docker/toolbox/') {
 			sh 'docker build . '
